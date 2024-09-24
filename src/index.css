@@ -1,0 +1,276 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+button {
+  width: 160px;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 5px;
+  height: 55px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between the items */
+  padding: 0;
+  list-style-type: none;
+  width:80%;
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 50px; /* Adjust top margin to center vertically */
+}
+
+.list_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.list_item:hover {
+  transform: scale(1.50);
+  
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+@media (max-width: 1200px) {
+  .container {
+    width: 70%;
+  }
+
+  ul {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  ul {
+    grid-template-columns: 1fr; 
+  }
+
+  ul li {
+    margin: 20px; 
+    width: 90%;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%; 
+  }
+
+  ul li {
+    width: 100%; 
+    margin: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 14px; 
+    padding: 10px;
+  }
+
+  ul {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  border: rgb(37, 35, 35) solid 5px;
+  width: 80vw;
+  height: auto; 
+  height: 80vh; 
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+
+.close-btn {
+  align-self: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.close-btn:hover {
+  background: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95vw;
+    height: auto; 
+  }
+
+  .close-btn {
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+/* Task styling */
+#task {
+  color: white;
+  background: #007bff;
+  height: 45px;
+  align-content: center;
+  border-radius: 5px;
+}
+
+.input-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 25px;
+}
+
+.input-field {
+  margin-top: 19px;
+  height: 50px;
+  width: 405px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0px;
+  margin-left: auto; 
+}
+
+.input-field::placeholder {
+  font-size: 16px; 
+  font-family: Arial, sans-serif;
+  color: gray;
+}
+
+.create-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.createTask {
+  height: 52px;
+  width: 250px;
+  border-radius: 8px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;}
+
+.input-In-Cards{
+  height: 5vh;
+  width: 75%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 280px;
+  margin-left: 70px;
+  font-size: 16px;
+
+}
+.input-In-Cards::placeholder{
+  font-size: 20px;
+}
+.Dropdown{
+  height: 200px;
+  width: 100px;
+  display: flex;
+  margin: 10px 73px;
+font-size: 20px;}

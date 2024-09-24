@@ -1,0 +1,25 @@
+.cloneTask{
+    height: 50px;
+  width: 308px;
+  height: 60px;
+  width: 506px;
+  border-radius: 18px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  display: flex;
+  gap: 25px;
+}
+
+.Select-Task {
+    height: 30px;
+    width: 200px;
+    margin: 0 auto;
+}
+.button{
+    height: 50px;
+    width: 100px;
+    font-size: 15px;
+}
